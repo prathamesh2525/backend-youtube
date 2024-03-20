@@ -1,11 +1,9 @@
-import mongoose from "mongoose"
-import { DB_NAME } from "./constants"
 import dotenv from "dotenv"
-import { app } from "./app"
-import { connectDB } from "./db"
+import { app } from "./app.js"
+import { connectDB } from "./db/index.js"
 
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 })
 
 connectDB()
@@ -14,7 +12,7 @@ connectDB()
       console.log("Error: ", err)
     })
     app.listen(process.env.PORT || 8000, () => {
-      console.log(`Server ruiing on prort`)
+      console.log(`Server running on port http://localhost:${process.env.PORT}`)
     })
   })
   .catch((e) => {
