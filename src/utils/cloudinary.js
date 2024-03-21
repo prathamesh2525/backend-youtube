@@ -2,6 +2,8 @@ import { v2 as cloudinary } from "cloudinary"
 import fs from "fs"
 import dotenv from "dotenv"
 
+
+// had to configure the dotenv one more time here bcoz variable were not accessible before it
 dotenv.config({
   path: './.env'
 })
