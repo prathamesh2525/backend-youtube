@@ -2,9 +2,13 @@ import dotenv from "dotenv"
 import { app } from "./app.js"
 import { connectDB } from "./db/index.js"
 
-dotenv.config({
+const result = dotenv.config({
   path: "./.env",
 })
+
+if (result.error) {
+  console.log("from index.js root file:", result.error)
+}
 
 connectDB()
   .then(() => {
