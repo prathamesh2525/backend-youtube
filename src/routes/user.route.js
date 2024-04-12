@@ -57,4 +57,4 @@ router.route("/history").get(verifyJWT, getWatchHistory)
 
 router.route("/logout").post(verifyJWT, logoutUser)
 
-export default router
+export default router 

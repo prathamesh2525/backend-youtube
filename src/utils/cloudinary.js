@@ -18,7 +18,6 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (localFilePath) => {
   console.log("Uploading on Cloudinary...")
-  console.log(localFilePath)
 
   try {
     // Check if localFilePath exists
